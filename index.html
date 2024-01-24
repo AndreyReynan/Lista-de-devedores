@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos</title>
+    <style>
+        body{
+            background-color: #202020;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        .tabela tr td{
+            border: 1px solid white;
+        }
+        .filtrosContainer{
+            display: none;
+        }
+        .editDivida{
+            display: none;
+            flex-direction: column;
+            width: 200px;
+        }
+        .adicionar{
+            display: none;
+            flex-direction: column;
+            width: 200px;
+        }
+        .excluir{
+            display: none;
+            flex-direction: column;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Devedores</h5>
+    <table id="tabela" class="tabela">
+        <tr><td>Nome</td><td>Divida</td></tr>
+        <tr><td id="nome1">Andrey</td><td id="divida1">50</td></tr>
+        <tr><td id="nome2">Ailane</td><td id="divida2">0</td></tr>
+        <tr><td id="nome3">Paulo</td><td id="divida3">10</td></tr>
+        <tr><td id="nome4">Victor</td><td id="divida4">0</td></tr>
+        <tr><td id="nome5">Marcos</td><td id="divida5">200</td></tr>
+        <tr><td id="nome6">Gabriel</td><td id="divida6">10</td></tr>
+        <tr><td id="nome7">Douglas</td><td id="divida7">0</td></tr>
+    </table>
+    <button id="filtros">Filtros</button>
+    <button id="editarTabela">Editar</button>
+    <button id="adicionarBtn">Adicionar</button>
+    <button id="excluirBtn">Excluir</button>
+    <div id="filtrosContainer" class="filtrosContainer">
+        <select id="escolherFiltro">
+            <option value="">Selecione um filtro</option>
+            <option value="Nome">Nome</option>
+            <option value="Divida">Divida</option>
+        </select>
+        <button type="submit" id="filtrar">Filtrar</button>
+    </div>
+    <div class="editDivida" id="editDivida">
+        <h4>Editar a lista</h4>
+        <input type="text" id="inserirNome" placeholder="Insira o nome"/>
+        <input type="number" id="inserirValor" placeholder="Insira o valor da Divida">
+        <button type="submit" id="editar">Pronto</button>
+    </div>
+    <div class="adicionar" id="adicionarContainer">
+        <input type="text" id="adcionarNome" placeholder="Insira o nome">
+        <input type="number" id="adcionarDivida" placeholder="Insira o valor">
+        <button type="submit" id="inserir">inserir</button>
+    </div>
+    <div class="excluir" id="excluirContainer">
+        <input type="text" id="excluirNome" placeholder="Insira o nome">
+        <button type="submit" id="excluir">Excluir</button>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>
